@@ -11,27 +11,8 @@
 <div class="modal-header">
     <@c.page></@c.page>
 </div>
-<#--    REALIzATION FROM    GETBOOTSTRAP.COM    -->
-<#--<div class="site-container">-->
-<#--<div class="card-deck">-->
-<#--    <#list products as product>-->
-<#--            <div class="card my-3 m-2">-->
-<#--                <img src="/images/${product.previewImageId}" class="card-img-top">-->
-<#--                <div class="card-body" >-->
-<#--                    <h5 class="card-title">${product.title}</h5>-->
-<#--                    <p class="card-text">${product.price} ₽</p>-->
-<#--                </div>-->
-<#--                <div class="card-footer"><p class="card-text"><div><a href="/product/${product.id}"><img src="/static/images/detailed.png" alt="Подробнее" title="Подробнее" width="32" height="32" class="ui-icon-person"></a></div></div>-->
-<#--            </div>-->
-<#--    <#else>-->
-<#--        <h1 style="text-align: center">Не найдено</h1>-->
-<#--    </#list>-->
-<#--</div>-->
-<#--</div>-->
 
 
-
-<#-- DISPLAY; INLINE-BLOCK  ВОТ БЛЯТЬ РЕШЕНИЕ-->
 <div class="container my-5">
     <div class="card-deck">
         <#list products as product>

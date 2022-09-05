@@ -1,5 +1,4 @@
 <#macro page>
-<#--    shadow-sm p-3 mb-5 bg-white rounded-->
     <div class="container">
         <header class="d-flex justify-content-center py-3">
             <ul class="nav nav-pills">
@@ -78,16 +77,3 @@
 
 
 </#macro>
-<#--
-<#if user.email??>
-    <form action="/logout" method="post">
-        <input type="hidden" name="_csrf" value="${_csrf.token}">
-        <input type="submit" value="Выйти"/>
-    </form>
-    <#if user.isAdmin()>
-        <a href="/admin">Панель администратора</a>
-    </#if>
-<#else>
-    <a href="/login">Войти</a></h1>
-</#if>
--->

@@ -3,7 +3,6 @@ package uz.tuit.deliveryservice.models;
 import lombok.Data;
 import uz.tuit.deliveryservice.models.enums.Role;
 
-import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashSet;

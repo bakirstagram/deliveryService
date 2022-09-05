@@ -38,7 +38,6 @@ public class UserController {
         return "redirect:/login";
     }
 
-    // Profile
     @GetMapping("/profile")
     public String profile(Principal principal, Model model) {
         User user = userService.getUserByPrincipal(principal);
@@ -47,12 +46,10 @@ public class UserController {
     }
 
 
-    // Nothing
     @GetMapping("/hello")
     public String securityUrl() {
         return "/";
     }
-    // link to User info in product
     @GetMapping("/user/{user}")
     public String userInfo(@PathVariable("user") User user, Model model){
         model.addAttribute("user", user);

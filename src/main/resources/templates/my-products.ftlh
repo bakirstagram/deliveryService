@@ -24,7 +24,6 @@
         <form action="/product/create" method="post" enctype="multipart/form-data">
             <div class="tab-content">
                 <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
-                    <!-- Name input -->
                     <div class="form-outline mb-4">
                         <label for="registerName"></label><input type="text" name="title" id="registerName"
                                                                  class="form-control" placeholder="Title">
@@ -41,7 +40,6 @@
                     </div>
                     <input type="hidden" name="_csrf" value="${_csrf.token}">
 
-                    <!-- INPUT FILE -->
 
                     <div class="mb-3">
                         <label for="formFile" class="form-label">Preview image file</label>
@@ -55,7 +53,6 @@
                         <label for="formFile" class="form-label">Third Additional File</label>
                         <input class="form-control" type="file" name="file3" id="formFile">
                     </div>
-                    <!-- Submit button -->
                     <button type="submit" class="btn btn-success btn-block mb-3">Create</button>
                 </div>
             </div>
@@ -64,27 +61,6 @@
     </div>
 </div>
 
-
-<#--    <div class="container my-5">-->
-<#--        <div class="card-deck">-->
-<#--            <#list products as product>-->
-<#--                <a href="/product/${product.id}" class="product-link">-->
-<#--                    <div class="card" style="width: 350px; margin-inline: 8px; display: inline-block">-->
-<#--                        <img class="card-img-top" src="/images/${product.previewImageId}" alt="Card image cap">-->
-<#--                        <div class="card-body">-->
-<#--                            <h5 class="card-title">Card title</h5>-->
-<#--                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to-->
-<#--                                additional content. This content is a little bit longer.</p>-->
-<#--                        </div>-->
-<#--                        <div class="card-footer">-->
-<#--                            <small class="text-muted">Last updated 3 mins ago</small>-->
-<#--                        </div>-->
-<#--                    </div>-->
-<#--                </a>-->
-<#--            </#list>-->
-
-<#--        </div>-->
-<#--    </div>-->
 <div class="container">
     <div class="card-columns my-5">
         <#list products as product>

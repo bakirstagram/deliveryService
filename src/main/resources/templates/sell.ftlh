@@ -19,10 +19,8 @@
                 <h2 style="text-align: center">Добавить товар</h2>
                 <br>
 
-                <!-- Pills content -->
                 <div class="tab-content">
                     <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
-                        <!-- Name input -->
                         <div class="form-outline mb-4">
                             <input type="text" name="title" id="registerName" class="form-control" placeholder="Название">
                         </div>
@@ -38,7 +36,6 @@
                         </div>
                         <input type="hidden" name="_csrf" value="${_csrf.token}">
 
-                        <!-- INPUT FILE -->
 
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Preview image file</label>
@@ -52,12 +49,10 @@
                             <label for="formFile" class="form-label">Third Additional File</label>
                             <input class="form-control" type="file" name="file3" id="formFile">
                         </div>
-                        <!-- Submit button -->
                         <button type="submit" class="btn btn-success btn-block mb-3" style="width: 100%">Опубликовать</button>
                     </div>
                 </div>
             </div>
-            <!-- Pills content -->
         </form>
     </div>
 </#if>

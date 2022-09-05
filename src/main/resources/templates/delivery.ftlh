@@ -20,12 +20,11 @@
 
                 <br>
 
-                <!-- Pills content -->
                 <div class="tab-content">
                     <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
-                        <!-- Name input -->
                         <div class="form-outline mb-4">
-                            <input type="text" name="adress" id="registerName" class="form-control" placeholder="Адрес доставки">
+                            <input type="text" name="adress" id="registerName" class="form-control"
+                                   placeholder="Адрес доставки">
                         </div>
                         <div class="form-outline mb-4">
                             <input type="text" name="goods" id="registerName" class="form-control" placeholder="Товары">
@@ -34,38 +33,23 @@
                             <input type="text" name="city" id="registerName" class="form-control" placeholder="Город">
                         </div>
                         <div class="form-outline mb-4">
-                            <input type="number" name="phoneNumber" id="registerName" class="form-control" placeholder="Номер телефона">
+                            <input type="number" name="phoneNumber" id="registerName" class="form-control"
+                                   placeholder="Номер телефона">
                         </div>
                         <div class="form-outline mb-4">
-                            <input type="number" name="weight" id="registerName" class="form-control" placeholder="вес в килограммах">
+                            <input type="number" name="weight" id="registerName" class="form-control"
+                                   placeholder="вес в килограммах">
                         </div>
                         <div class="form-outline mb-4">
                             <textarea name="description" id="registerName" class="form-control"
                                       placeholder="Подробное описание заказа"></textarea>
                         </div>
-
                         <input type="hidden" name="_csrf" value="${_csrf.token}">
-
-                        <!-- INPUT FILE -->
-
-<#--                        <div class="mb-3">-->
-<#--                            <label for="formFile" class="form-label">Preview image file</label>-->
-<#--                            <input class="form-control" type="file" name="file1" id="formFile">-->
-<#--                        </div>-->
-<#--                        <div class="mb-3">-->
-<#--                            <label for="formFile" class="form-label">Second Additional File</label>-->
-<#--                            <input class="form-control" type="file" name="file2" id="formFile">-->
-<#--                        </div>-->
-<#--                        <div class="mb-3">-->
-<#--                            <label for="formFile" class="form-label">Third Additional File</label>-->
-<#--                            <input class="form-control" type="file" name="file3" id="formFile">-->
-<#--                        </div>-->
-                        <!-- Submit button -->
-                        <button type="submit" class="btn btn-success btn-block mb-3" style="width: 100%">Заказать</button>
+                        <button type="submit" class="btn btn-success btn-block mb-3" style="width: 100%">Заказать
+                        </button>
                     </div>
                 </div>
             </div>
-            <!-- Pills content -->
         </form>
     </div>
 </div>

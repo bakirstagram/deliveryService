@@ -12,7 +12,6 @@
 
 </@c.page>
 </div>
-<#--            ANOTHER CODE        -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="container my-5">
     <div class="row">
@@ -67,7 +66,6 @@
 </div>
 </div>
 
-<#--            CSS         -->
 <style>
     body {
         font-family: 'Open Sans', sans-serif;

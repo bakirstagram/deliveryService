@@ -38,16 +38,6 @@ public class User implements UserDetails {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "user")
     private Set<CustomOrder> orders = new HashSet<>();
 
-//    private ArrayList<CustomOrder> customOrders = new ArrayList<>();
-//
-//    @OneToMany(mappedBy = "user")
-//    public ArrayList<CustomOrder> getCustomOrders(){
-//        return this.customOrders;
-//    }
-//
-//    public void setCustomOrders(CustomOrder customOrder){
-//        this.customOrders.add(customOrder)
-//    }
 
     @Column(name = "password", length = 1000)
     private String password;

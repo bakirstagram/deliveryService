@@ -15,14 +15,9 @@
             <li class="nav-item"><a href="#" class="nav-link">Cart</a></li>
 
             <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-<#--            <form action="/" method="get">-->
-<#--                <input style="margin-left: 30px; margin-right: 20px; width: 200px" type="search"-->
-<#--                       class="form-control" name="title" placeholder="Search..." aria-label="Search">-->
-<#--            </form>-->
         </ul>
     </header>
 </div>
-<!-- LOGIN FORM -->
 
 <div class="container col-xl-10 col-xxl-8 px-4 py-5">
     <div class="row align-items-center g-lg-5 py-5">
@@ -30,7 +25,6 @@
             <h1 class="display-4 fw-bold lh-1 mb-3">Vertically centered hero sign-up form</h1>
             <p class="col-lg-10 fs-4">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it. <small class="text-muted"><a href="/registration">Create an account</a></small></p>
 
-<#--            <p class="col-lg-10 fs-4"> <a href="/registration"><button class="w-100 btn btn-lg btn-primary">Create an account</button></a></p>-->
 
         </div>
 

@@ -19,27 +19,18 @@ public class UserService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 
-    public boolean createUser(User user) { // создание пользователя
-        // получаем эл. почту из пользователя который отправил соответствующий запрос
-        // храним в поле типа String чтобы не обращаться много раз
+    public boolean createUser(User user) {
         String userEmail = user.getEmail();
 
-        // проверяем базу данных на соответствие пришедшему эл. адресу
         if (userRepository.findByEmail(userEmail) != null) {
-            // если есть пользователь с таким e-mail возвращаем false
             return false;
         }
-        // активируем
         user.setActive(true);
-        // присваиваем роль для пришедшего пользователя
         user.getRoles().add(Role.ROLE_USER);
-        // зашифровываем пароль
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        // выведем информацию в лог
         log.info("Saving new user with email = {}", userEmail);
-        // сохраняем в базу данных нового пользователя
         userRepository.save(user);
-        // отправляем ответ для корректировки на шаблонизаторе
+
         return true;
     }
 
@@ -47,18 +38,18 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public void banUser(Long id) { // метод для бана пользователей который используется админом
+    public void banUser(Long id) {
         User user = userRepository.findById(id).orElse(null);
-        if (user != null) { // если пользователь существует
-            if (user.isActive()) { // бан
+        if (user != null) {
+            if (user.isActive()) {
                 user.setActive(false);
                 log.info("Ban user with id: {}, e-mail: {}", user.getId(), user.getEmail());
-            } else { // разбан
+            } else {
                 user.setActive(true);
                 log.info("Unban user with id: {}, e-mail: {}", user.getId(), user.getEmail());
             }
         }
-        userRepository.save(user); // обновляем данные в базе данных пересохраняя пользователя с отрицательной активностью
+        userRepository.save(user);
     }
 
     public void changeUserRoles(User user, Map<String, String> form) {
@@ -67,13 +58,14 @@ public class UserService {
                 .collect(Collectors.toSet());
         user.getRoles().clear();
 
-        for(String key : form.keySet()){
-            if(roles.contains(key)){
+        for (String key : form.keySet()) {
+            if (roles.contains(key)) {
                 user.getRoles().add(Role.valueOf(key));
             }
         }
         userRepository.save(user);
     }
+
     public User getUserByPrincipal(Principal principal) {
         if (principal == null) return new User();
         return userRepository.findByEmail(principal.getName());

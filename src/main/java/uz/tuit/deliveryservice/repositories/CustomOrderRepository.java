@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 import uz.tuit.deliveryservice.models.CustomOrder;
 
 import java.util.List;
-//dao
 public interface CustomOrderRepository extends JpaRepository<CustomOrder, Long> {
     List<CustomOrder> findCustomOrdersByUserId(Long id);
 }

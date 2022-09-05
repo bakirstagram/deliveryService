@@ -37,7 +37,6 @@ public class ProductController {
         return "product-info";
     }
 
-    // Sell
     @GetMapping("/sell")
     public String getSellPage(Model model, Principal principal){
         model.addAttribute("user", productService.getUserByPrincipal(principal));
